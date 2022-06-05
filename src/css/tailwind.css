@@ -1,0 +1,57 @@
+/* ./your-css-folder/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .section {
+        @apply w-full px-4 pt-7 lg:px-6;
+    }
+
+    .section-title {
+        @apply text-primary font-semibold text-xl mb-5 lg:font-bold lg:text-2xl dark:text-white;
+    }
+
+    .card {
+        @apply w-48 h-60 rounded-lg shadow-md overflow-hidden snap-center lg:w-72 lg:h-80;
+    }
+    .card:nth-child(odd) {
+        @apply  bg-secondary text-white dark:bg-gray-700;
+    }
+
+    .card:nth-child(even) {
+        @apply bg-white text-tertiary dark:bg-gray-800 dark:text-gray-300;
+    }
+
+    .card__text--primary {
+        @apply font-bold text-sm mb-2;
+    }
+
+    .card__text--secondary {
+       @apply font-medium text-xs;
+    }
+
+    .trending-card {
+        @apply w-full h-80 rounded-2xl px-6 shadow-md bg-cover bg-center lg:text-right lg:flex lg:flex-col lg:items-end;
+    }
+
+    .t-card__text--primary {
+        @apply font-extrabold text-2xl text-white;
+    }
+
+    .t-card__text--secondary {
+        @apply w-48 font-medium text-base text-white mt-1 lg:w-52;
+    }
+
+    .faqs__text--primary {
+        @apply font-semibold text-sm text-primary mt-3 lg:text-xl dark:text-white;
+    }
+
+    .faqs__text--secondary {
+        @apply font-medium text-xs text-black mt-4 lg:text-base dark:text-gray-300;
+    }
+
+    .aboutUs__links {
+        @apply font-medium text-gray-300 text-sm block mb-2 dark:text-gray-500;
+    }
+}
